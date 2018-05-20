@@ -1,11 +1,11 @@
 {
-  "name": "nest-rest-api",
+  "name": "nest-rest",
   "version": "0.0.1",
   "description": "Simple NEST REST APIs client",
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/teifip/nest-rest-api.git"
+    "url": "https://github.com/teifip/nest-rest.git"
   },
   "keywords": [
     "NEST",
@@ -16,9 +16,9 @@
     "node": ">=7.0.0"
   },
   "bugs": {
-    "url": "https://github.com/teifip/nest-rest-api/issues"
+    "url": "https://github.com/teifip/nest-rest/issues"
   },
-  "homepage": "https://github.com/teifip/nest-rest-api#readme",
+  "homepage": "https://github.com/teifip/nest-rest#readme",
   "author": "Paolo Fiorini <teifip@gmail.com>",
   "license": "MIT",
   "dependencies": {

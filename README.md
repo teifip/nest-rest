@@ -1,11 +1,11 @@
-# nest-rest-api
+# nest-rest
 
 Basic client for the [NEST REST APIs](https://developers.nest.com/documentation/cloud/rest-guide), including support to obtain and revoke [OAuth2](https://developers.nest.com/documentation/cloud/how-to-auth) access codes.
 
 ### Overview
 
 ```javascript
-const nest = require('nest-rest-api');
+const nest = require('nest-rest');
 
 // Instantiate the client
 const client = nest.restApiClient(token);
@@ -43,7 +43,7 @@ The client automatically follows [307 redirects](https://developers.nest.com/doc
 Support for [OAuth2](https://developers.nest.com/documentation/cloud/how-to-auth) operations is available through a dedicated set of functions:
 
 ```javascript
-const oauth2 = require('nest-rest-api').oauth2;
+const oauth2 = require('nest-rest').oauth2;
 
 oauth2.exchangeCodeForToken(code, (error, result) => {
   // Process result
@@ -53,7 +53,7 @@ oauth2.exchangeCodeForToken(code, (error, result) => {
 ### Installation
 
 ```
-npm install nest-rest-api --save
+npm install nest-rest --save
 ```
 
 ### REST API client
@@ -61,7 +61,7 @@ npm install nest-rest-api --save
 The REST API client is instantiated as follows:
 
 ```javascript
-const nest = require('nest-rest-api');
+const nest = require('nest-rest');
 
 const client = nest.restApiClient(token);
 ```
@@ -97,7 +97,7 @@ In addition, if you have registered multiple redirect URIs for the OAuth2 client
 Returns the authorization URL as string. The OAuth2 flow starts with pointing the user's browser to this URL. `state` must be passed as string. Example:
 
 ```javascript
-const oauth2 = require('nest-rest-api').oauth2;
+const oauth2 = require('nest-rest').oauth2;
 
 let authUrl = oauth2.generateAuthorizationUrl('4Ya0caMziW');
 ```
