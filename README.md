@@ -34,7 +34,7 @@ Once instantiated, the client can be used for multiple subsequent requests:
 async function makeRequest() {
   let result = await client.read('/devices/thermostats');
 
-  let otherResult = await client.read('structures');
+  let otherResult = await client.read('/structures');
 }
 ```
 
@@ -66,7 +66,7 @@ const nest = require('nest-rest-api');
 const client = nest.restApiClient(token);
 ```
 
-`token` must be a valid [OAuth2](https://developers.nest.com/documentation/cloud/how-to-auth) access token passed as string. Once instantiated, the client has the read/write privileges determined by the scope of its access token.
+`token` must be a valid [OAuth2](https://developers.nest.com/documentation/cloud/how-to-auth) access token (string). Once instantiated, the client has the read/write privileges determined by the scope of its access token.
 
 **client.read(path[, callback])**
 
@@ -94,9 +94,7 @@ In addition, if you have registered multiple redirect URIs for the OAuth2 client
 
 **oauth2.generateAuthorizationUrl(state)**
 
-Returns the authorization URL as string. The OAuth2 flow starts with pointing the user's browser to this URL.
-
-`state` must be passed as string. Example:
+Returns the authorization URL as string. The OAuth2 flow starts with pointing the user's browser to this URL. `state` must be passed as string. Example:
 
 ```javascript
 const oauth2 = require('nest-rest-api').oauth2;
@@ -125,7 +123,7 @@ Access tokens are generated with long term validity (10 years). Therefore, the e
 
 Initiates a token revocation request. `token` must be passed as string.
 
-> Access tokens have long term validity (10 years). It is really a good practice to revoke them when not needed any longer.
+> Access tokens have long term validity. It is really a good practice to revoke them when not needed any longer.
 
 If present, `callback` must be a function that expects `(error, result)` as input parameters. Otherwise, if `callback` is not present, then `oauth2.revokeToken()` returns a promise to resolve `result` or to catch `error`.
 
@@ -137,4 +135,4 @@ The `result` value is an object defined as follows:
 | `revoked`     | Integer; equal to `1` if the submitted token was actually revoked; equal to `0` if the submitted token did no exist; only present if `success` is `true` |
 | `response` | Object; entire response returned by the API server; see the documentation of the [accept-json](https://github.com/teifip/accept-json) package for details; only present if `success` is `false` |
 
-Note that token revocation is considered successful both when the token was actually found and revoked (`204` response from the server) and when it was simply not found (`404` response from the server).
+Note that token revocation is considered successful both when the token is actually found and revoked (`204` response from the server) and when it is simply not found (`404` response from the server).
