@@ -31,7 +31,7 @@ async function makeRequest() {
 Once instantiated, the client can be used for multiple subsequent requests:
 
 ```javascript
-async function makeRequest() {
+async function makeRequests() {
   let result = await client.read('/devices/thermostats');
 
   let otherResult = await client.read('/structures');
@@ -84,7 +84,7 @@ The `result` value is an object defined as follows:
 
 **client.write(path, data[, calllback])**
 
-Not currently supported. Will be added in future releases.
+Initiates an [API write](https://developers.nest.com/documentation/cloud/how-to-write-data) call. `data` must be an object with the data to be written. All the rest is the same as for the `client.read()` method.
 
 ### OAuth2 utilities
 
