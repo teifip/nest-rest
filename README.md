@@ -1,6 +1,6 @@
 # nest-rest
 
-Basic client for the [NEST REST APIs](https://developers.nest.com/documentation/cloud/rest-guide), including support to obtain and revoke [OAuth2](https://developers.nest.com/documentation/cloud/how-to-auth) access codes.
+Basic client for the [Nest REST APIs](https://developers.nest.com/documentation/cloud/rest-guide), including support to obtain and revoke [OAuth2](https://developers.nest.com/documentation/cloud/how-to-auth) access codes.
 
 ### Overview
 

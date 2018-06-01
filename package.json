@@ -1,7 +1,7 @@
 {
   "name": "nest-rest",
-  "version": "0.1.0",
-  "description": "Simple client for NEST REST APIs",
+  "version": "0.1.1",
+  "description": "Simple client for Nest REST APIs",
   "main": "index.js",
   "repository": {
     "type": "git",
