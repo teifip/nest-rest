@@ -1,6 +1,6 @@
 {
   "name": "nest-rest",
-  "version": "0.1.1",
+  "version": "1.0.0",
   "description": "Simple client for Nest REST APIs",
   "main": "index.js",
   "repository": {
@@ -22,6 +22,6 @@
   "author": "Paolo Fiorini <teifip@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "accept-json": "^0.1.1"
+    "accept-json": "^1.0.0"
   }
 }
